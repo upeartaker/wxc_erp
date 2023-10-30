@@ -6,29 +6,27 @@ import { ISODateString } from 'next-auth/core/types'
 interface User extends DefaultUser {
   id: string
   name?: string | null
-  email?: string | null
+  account?: string | null
   image?: string | null
-  address?: string | null
-  streamKey?: string | null
+  role?: string | null
 }
 
 declare module 'next-auth' {
   interface User extends DefaultUser {
     id: string
     name?: string | null
-    email?: string | null
+    account?: string | null
     image?: string | null
-    address?: string | null
-    streamKey?: string | null
+    role?: string | null
   }
 
   interface Session extends DefaultSession {
     user?: {
+      id: string
       name?: string | null
-      email?: string | null
+      account?: string | null
       image?: string | null
-      address?: string | null
-      streamKey?: string | null
+      role?: string | null
     }
     expires: ISODateString
   }

@@ -12,10 +12,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
-    "framer-motion": "^10.16.4",
-    "next": "13.5.6",
-    "next-auth": "^4.24.3",
-    "@prisma/client": "^5.5.2",
+    "@prisma/client": "5.4.2",
     "@react-aria/ssr": "^3.7.1",
     "@react-aria/visually-hidden": "^3.8.3",
     "@tabler/icons-react": "^2.34.0",
@@ -25,9 +22,12 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "framer-motion": "^10.16.4",
+    "next": "13.5.6",
+    "next-auth": "^4.24.3",
     "next-themes": "^0.2.1",
     "postcss": "8.4.29",
-    "prisma": "^5.5.2",
+    "prisma": "5.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^10.3.1",
@@ -37,6 +37,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "prettier": "^3.0.3",
     "sass": "^1.69.3"
   }
 }
