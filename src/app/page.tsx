@@ -1,12 +1,10 @@
-'use client'
-import Image from 'next/image'
-import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+export default async function Home(context: any) {
+  const res =  await getServerSession(authOptions)
+  const { role } = res?.user ?? {}
 
-export default function Home(context: any) {
-  const { data, status } = useSession()
-  if (status === 'loading') return <div>loading</div>
-  const { role } = data?.user ?? {}
   switch (role) {
     case 'admin':
       redirect('/admin')

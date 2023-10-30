@@ -1,8 +1,9 @@
 import NextAuth from 'next-auth/next'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import prisma from '@/db'
+import { AuthOptions } from 'next-auth'
 
-const handler = NextAuth({
+export const authOptions: AuthOptions = {
   providers: [
     CredentialsProvider({
       credentials: {
@@ -42,7 +43,6 @@ const handler = NextAuth({
   },
   callbacks: {
     async jwt({ token, user }) {
-      console.log(2222222, token, user)
       if (user) {
         token.user = user
       }
@@ -54,5 +54,6 @@ const handler = NextAuth({
       return session
     }
   }
-})
+}
+export const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST }
