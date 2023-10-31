@@ -17,7 +17,7 @@ export default function CreateModalComp() {
 
   return (
     <>
-      <Modal size={'full'} isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
+      <Modal  isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
         <ModalContent>
           {(onClose) => (
             <>
